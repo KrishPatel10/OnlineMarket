@@ -74,7 +74,8 @@ router.post('/signup', async (req, res) => {
             const newUser = new User({
                 name: req.body.name,
                 email: req.body.email,
-                password: req.body.password
+                password: req.body.password,
+                userType: req.body.type
             });
             // console.log("Printed");
             newUser.save().then((result) => {
